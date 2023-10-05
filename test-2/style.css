@@ -1,0 +1,366 @@
+/***************** CSS *******************/
+
+/************** Style für den Body **************/
+
+body {
+    background-image: url(./bilder/hintergund.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 1px;
+}
+
+/**************** Slide Animation ***************/
+
+body {
+    animation: slide 1s ease 0s 1 normal forwards;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*************** Style für den Header ****************/
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: solid blue 8px;
+    outline: green 9px solid;
+    background-color: rgba(255, 255, 255, 0.833);
+    margin: 10px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/******* Navigation Text ********/
+header nav table a {
+    font-size: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 100px;
+    color: green;
+    text-shadow: 1px 1px 1px black;
+}
+
+/******** Logo *********/
+header nav img {
+    margin-left: 15px;
+    margin-top: 55px;
+    width: 550px;
+    height: 175px;
+    border-radius: 5px;
+    border: solid blue 5px;
+}
+
+/********* Suchleiste ***********/
+header div input {
+    width: 500px;
+    margin: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: solid blue 5px;
+}
+
+/******** Farbe und Schriftdicke vom Placeholder **********/
+header div input::placeholder {
+    color: green;
+    font-weight: bold;
+}
+
+/************** Style für den Main Startseite ****************/
+
+/********** Startseite mit 2 Spalten ************/
+.mainstart {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/******** Überschriften der Kontainer ********/
+.mainstart .radUmopped .fahrrad h3,
+.mainstart .radUmopped .motorrad h3,
+.mainstart .divroller .e-roller h3,
+.mainstart .scootUtesla .scooter h3,
+.mainstart .scootUtesla .tesla h3 {
+    color: green;
+    text-shadow: 1px 1px 1px black;
+    font-size: 33px;
+}
+
+.mainstart .radUmopped,
+.mainstart .scootUtesla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-column-end: span 2;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mainstart .fahrrad,
+.mainstart .motorrad,
+.mainstart .e-roller,
+.mainstart .scooter,
+.mainstart .tesla {
+    width: 600px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border: solid blue 8px;
+    outline: green 9px solid;
+    box-shadow: 25px 25px 10px black;
+    line-height: 35px;
+}
+
+.mainstart .fahrrad *,
+.mainstart .motorrad *,
+.mainstart .e-roller *,
+.mainstart .scooter *,
+.mainstart .tesla * {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+}
+
+.mainstart .divroller {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    grid-column-start: 2;
+    margin: 25px;
+}
+
+/*************** Style für Main Info **************/
+
+/********** Info Seite mit 2 Spalten *********/
+.maininfo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+/********* Bildgröße ********/
+.maininfo img {
+    height: 140px;
+    width: 140px;
+}
+
+.maininfo .infobox1,
+.maininfo .infobox2,
+.maininfo .infobox3,
+.maininfo .infobox4 {
+    max-width: 320px;
+    max-height: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: solid blue 8px;
+    outline: green 9px solid;
+    margin: 200px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    outline: green 9px solid;
+    box-shadow: 25px 25px 10px black;
+}
+
+/********* Maximale Höhe der Textfelder
+           und overflow **************/
+.maininfo .infobox1 .thema,
+.maininfo .infobox2 .thema,
+.maininfo .infobox3 .thema,
+.maininfo .infobox4 .thema {
+    max-height: 140px;
+    overflow: auto;
+}
+
+/********** Scrollbar ausblenden ***********/
+.maininfo .infobox1 .thema::-webkit-scrollbar,
+.maininfo .infobox2 .thema::-webkit-scrollbar,
+.maininfo .infobox3 .thema::-webkit-scrollbar,
+.maininfo .infobox4 .thema::-webkit-scrollbar {
+    display: none;
+}
+
+/********* Überschrift Farbe mit Schatten *********/
+.maininfo .infobox1 .thema h3,
+.maininfo .infobox2 .thema h3,
+.maininfo .infobox3 .thema h3,
+.maininfo .infobox4 .thema h3 {
+    color: green;
+    text-shadow: 1px 1px 1px black;
+}
+
+/*********** Style für Main Impressum ************/
+
+.mainimp .imptabellen {
+    display: flex;
+    flex-wrap: wrap;
+}
+/******** Kontainer ********/
+.mainimp .imptabellen .impflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+/*********** Inhalt ***********/
+.mainimp .imptabellen .verantwortlich,
+.mainimp .imptabellen .kontakt,
+.mainimp .imptabellen .adresse {
+    border: solid blue 8px;
+    outline: green 9px solid;
+    border-radius: 15px;
+    text-align: center;
+    margin: 50px;
+    font-size: 25px;
+    padding: 10px;
+    width: 500px;
+    background-color: white;
+    outline: green 9px solid;
+    box-shadow: 25px 25px 10px black;
+    line-height: 45px;
+}
+
+/********** Überschriften ***********/
+.mainimp .imptabellen .verantwortlich h3,
+.mainimp .imptabellen .kontakt h3,
+.mainimp .imptabellen .adresse h3,
+.mainimp .disclaimer h3 {
+    color: green;
+    text-shadow: 1px 1px 1px black;
+}
+/******* Disclaimer kontainer *******/
+.mainimp .disclaimer {
+    border: solid blue 8px;
+    outline: green 9px solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: 25px;
+    text-align: center;
+    height: 400px;
+    width: 80%;
+    border-radius: 15px;
+    overflow: auto;
+    background-color: white;
+    outline: green 9px solid;
+    box-shadow: 25px 25px 10px black;
+}
+/************ Scrollbar aublenden *************/
+main .disclaimer::-webkit-scrollbar {
+    display: none;
+}
+/******** Disclaimer Inhalt **********/
+main .disclaimer p {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 35px;
+}
+
+/************* Style für Zweites Nav-Menü **************/
+
+div .nav2 {
+    width: 99.5%;
+    border: solid blue 8px;
+    outline: green 9px solid;
+    border-bottom: solid 8px gray;
+    background-color: rgba(255, 255, 255, 0.833);
+    margin-left: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+/******* Navigation Text ********/
+div .nav2 a {
+    font-size: 35px;
+    color: green;
+    text-shadow: 1px 1px 1px black;
+}
+
+/************** Style für AGB und Datenschutz ***************/
+
+main .sect1,
+main .sect2,
+main .sect3,
+main .sect4,
+main .sect5,
+main .sect6 {
+    border: solid blue 8px;
+    outline: green 9px solid;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 25px;
+    box-shadow: 25px 25px 10px black;
+    line-height: 35px;
+}
+
+/*************** Style für den Footer ***************/
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    border: solid blue 8px;
+    outline: green 9px solid;
+    background-color: rgba(255, 255, 255, 0.833);
+    margin: 10px;
+    justify-content: space-between;
+}
+/********* Kontakt und Adresse **********/
+footer .footertable {
+    margin: 30px 0px 40px 50px;
+    line-height: 45px;
+    font-size: 25px;
+    color: green;
+    text-shadow: 1px 1px 1px black;
+}
+/************ Zahlungsarten *************/
+footer .pay {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+footer .pay img {
+    width: 65px;
+    height: 50px;
+    padding: 1px 3px 1px 3px;
+    margin-top: 6px;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgba(255, 255, 255, 0.429);
+    border-radius: 5px;
+}
+/********** Social Media ***********/
+footer .social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 50px;
+}
+
+footer .social img {
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    margin: 6px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.429);
+}
